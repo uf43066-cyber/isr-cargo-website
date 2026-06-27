@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cargo Insurance Calculator - ISR International Shipping Routes. Calculate insurance costs for your shipments. Protect your cargo against damage and loss.">
+    <meta name="keywords" content="cargo insurance, insurance calculator, shipping insurance, ISR cargo insurance">
+    <title>Cargo Insurance | ISR International Shipping Routes</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="canonical" href="https://isrshipping.com/insurance.html">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.png" alt="ISR International Shipping Routes Logo">
+                    <div class="logo-text">
+                        ISR International Shipping Routes
+                        <span>Marine Cargo Services</span>
+                    </div>
+                </a>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="testimonials.html" class="nav-link">Testimonials</a></li>
+                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li><a href="dashboard.html" class="nav-link"><i class="fas fa-user"></i> Dashboard</a></li>
+                    <li>
+                        <div class="language-switch">
+                            <button class="lang-btn active">EN</button>
+                        </div>
+                    </li>
+                </ul>
+                
+                <div class="mobile-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Cargo Insurance</h1>
+            <ul class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li>Cargo Insurance</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Insurance Calculator Section -->
+    <section class="insurance-section section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mx-auto">
+                    <div class="insurance-card">
+                        <h3><i class="fas fa-calculator"></i> Insurance Calculator</h3>
+                        <p class="text-center mb-4">Calculate the cost to insure your shipment</p>
+                        
+                        <form id="insuranceForm">
+                            <div class="form-group">
+                                <label for="insType">Cargo Type</label>
+                                <select id="insType" required>
+                                    <option value="">Select Cargo Type</option>
+                                    <option value="general">General Goods (1.5%)</option>
+                                    <option value="electronics">Electronics (2.5%)</option>
+                                    <option value="fragile">Fragile Items (3.5%)</option>
+                                    <option value="valuable">Valuable Items (5%)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="insValue">Declared Value (AED)</label>
+                                <input type="number" id="insValue" placeholder="Enter cargo value" min="1" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="insDestination">Destination</label>
+                                <select id="insDestination" required>
+                                    <option value="">Select Destination</option>
+                                    <option value="pakistan">Pakistan</option>
+                                    <option value="india">India</option>
+                                    <option value="bangladesh">Bangladesh</option>
+                                    <option value="srilanka">Sri Lanka</option>
+                                    <option value="other">Other Countries</option>
+                                </select>
+                            </div>
+                            <div id="insError" style="color: var(--danger); font-size: 14px; display: none; margin-bottom: 15px;"></div>
+                            <button type="submit" class="btn btn-primary w-100">Calculate Premium</button>
+                        </form>
+                        
+                        <div id="insResult"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Insurance Info -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Why Get Cargo Insurance?</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="info-card text-center">
+                        <div class="info-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Protect Your Investment</h4>
+                        <p>Your cargo represents significant investment. Insurance protects you against financial loss due to damage or loss.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info-card text-center">
+                        <div class="info-icon">
+                            <i class="fas fa-hand-holding-usd"></i>
+                        </div>
+                        <h4>Peace of Mind</h4>
+                        <p>Ship with confidence knowing you're covered against unforeseen circumstances during transit.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info-card text-center">
+                        <div class="info-icon">
+                            <i class="fas fa-file-contract"></i>
+                        </div>
+                        <h4>Easy Claims Process</h4>
+                        <p>Our streamlined claims process ensures you get compensated quickly with minimal paperwork.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coverage Details -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="text-center mb-5">What's Covered?</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="coverage-list">
+                        <div class="coverage-item">
+                            <i class="fas fa-check"></i>
+                            <div>
+                                <h4>Physical Damage</h4>
+                                <p>Coverage for damage caused by accidents, handling, or transit incidents</p>
+                            </div>
+                        </div>
+                        <div class="coverage-item">
+                            <i class="fas fa-check"></i>
+                            <div>
+                                <h4>Theft & Piracy</h4>
+                                <p>Protection against theft during transit or at storage facilities</p>
+                            </div>
+                        </div>
+                        <div class="coverage-item">
+                            <i class="fas fa-check"></i>
+                            <div>
+                                <h4>Natural Disasters</h4>
+                                <p>Coverage for losses due to storms, floods, earthquakes, or other natural events</p>
+                            </div>
+                        </div>
+                        <div class="coverage-item">
+                            <i class="fas fa-check"></i>
+                            <div>
+                                <h4>Fire Damage</h4>
+                                <p>Protection against fire damage during storage or transit</p>
+                            </div>
+                        </div>
+                        <div class="coverage-item">
+                            <i class="fas fa-check"></i>
+                            <div>
+                                <h4>Loading/Unloading</h4>
+                                <p>Coverage for damage that may occur during loading or unloading operations</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="footer-logo">
+                        <img src="images/logo.png" alt="ISR International Shipping Routes Logo">
+                        <span>ISR International Shipping Routes</span>
+                    </a>
+                    <p>Professional marine cargo services in Sharjah, UAE. Shipping to Pakistan and worldwide.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="quote.html">Get Quote</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="services.html">Domestic Shipping</a></li>
+                        <li><a href="services.html">International Shipping</a></li>
+                        <li><a href="services.html">Express Cargo</a></li>
+                        <li><a href="services.html">Warehousing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Sharjah, UAE</li>
+                        <li><i class="fas fa-phone"></i> +971 589 195 672</li>
+                        <li><i class="fas fa-envelope"></i> isrcargo@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ISR International Shipping Routes. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/971589195672" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Live Chat Widget -->
+    <div class="chat-widget" id="chatWidget">
+        <div class="chat-header">
+            <div class="chat-header-info">
+                <div class="chat-avatar">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <div>
+                    <strong>ISR International Shipping Routes Support</strong>
+                    <div class="chat-status online">Online</div>
+                </div>
+            </div>
+            <button id="closeChat"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="chat-message bot">
+                <div class="message-content">
+                    Hello! Need insurance for your shipment? We're here to help!
+                </div>
+                <span class="message-time">Now</span>
+            </div>
+        </div>
+        <div class="quick-chat-options">
+            <button class="quick-chat-btn" data-message="I need a shipping quote">Get Quote</button>
+            <button class="quick-chat-btn" data-message="Contact customer support">Contact</button>
+        </div>
+        <div class="chat-input-area">
+            <input type="text" id="chatInput" placeholder="Type your message...">
+            <button id="sendChat"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <!-- Chat Toggle -->
+    <button class="chat-toggle" id="chatToggle">
+        <i class="fas fa-comments"></i>
+    </button>
+
+    <!-- Scroll Top -->
+    <div class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

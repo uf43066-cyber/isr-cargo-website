@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ISR International Shipping Routes Dashboard - Track your shipments, manage addresses, and view your shipping history.">
+    <meta name="keywords" content="cargo dashboard, shipment tracking, customer portal, ISR cargo login">
+    <title>Customer Dashboard | ISR International Shipping Routes</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="canonical" href="https://isrshipping.com/dashboard.html">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.png" alt="ISR International Shipping Routes Logo">
+                    <div class="logo-text">
+                        ISR International Shipping Routes
+                        <span>Marine Cargo Services</span>
+                    </div>
+                </a>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="testimonials.html" class="nav-link">Testimonials</a></li>
+                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li>
+                        <div class="language-switch">
+                            <button class="lang-btn active">EN</button>
+                        </div>
+                    </li>
+                </ul>
+                
+                <div class="mobile-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Customer Dashboard</h1>
+            <ul class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li>Dashboard</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section class="dashboard-section">
+        <div class="container">
+            <div class="dashboard-container">
+                
+                <!-- Login Form -->
+                <div class="dashboard-login" id="dashboardLogin">
+                    <h3><i class="fas fa-user-circle"></i> Customer Login</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="dashEmail">Email Address</label>
+                            <input type="email" id="dashEmail" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="dashPassword">Password</label>
+                            <input type="password" id="dashPassword" placeholder="Enter your password" required>
+                        </div>
+                        <div class="spinner" style="display: none; text-align: center; margin: 20px 0;">
+                            <i class="fas fa-spinner fa-spin fa-2x"></i>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                        <p class="text-center mt-3">
+                            <a href="#">Forgot Password?</a> | <a href="#">Register</a>
+                        </p>
+                    </form>
+                </div>
+
+                <!-- Dashboard Panel -->
+                <div class="dashboard-panel" id="dashboardPanel">
+                    <div class="dashboard-grid">
+                        <div class="dashboard-sidebar">
+                            <h4><i class="fas fa-user"></i> My Account</h4>
+                            <ul class="sidebar-menu">
+                                <li><a href="#" class="active"><i class="fas fa-box"></i> My Shipments</a></li>
+                                <li><a href="#"><i class="fas fa-map-marker-alt"></i> Addresses</a></li>
+                                <li><a href="#"><i class="fas fa-credit-card"></i> Payment Methods</a></li>
+                                <li><a href="#"><i class="fas fa-history"></i> History</a></li>
+                                <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                            </ul>
+                            <button id="dashLogout" class="btn"><i class="fas fa-sign-out-alt"></i> Logout</button>
+                        </div>
+                        
+                        <div class="dashboard-content">
+                            <div id="dashShipments"></div>
+                            <div id="dashAddresses"></div>
+                            <div id="dashProfile"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="footer-logo">
+                        <img src="images/logo.png" alt="ISR International Shipping Routes Logo">
+                        <span>ISR International Shipping Routes</span>
+                    </a>
+                    <p>Professional marine cargo services in Sharjah, UAE. Shipping to Pakistan and worldwide.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="quote.html">Get Quote</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-services">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="services.html">Domestic Shipping</a></li>
+                        <li><a href="services.html">International Shipping</a></li>
+                        <li><a href="services.html">Freight Forwarding</a></li>
+                        <li><a href="services.html">Express Cargo</a></li>
+                        <li><a href="services.html">Warehousing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Sharjah, UAE</li>
+                        <li><i class="fas fa-phone"></i> +971 589 195 672</li>
+                        <li><i class="fas fa-envelope"></i> isrcargo@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 ISR International Shipping Routes. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/971589195672" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Live Chat Widget -->
+    <div class="chat-widget" id="chatWidget">
+        <div class="chat-header">
+            <div class="chat-header-info">
+                <div class="chat-avatar">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <div>
+                    <strong>ISR International Shipping Routes Support</strong>
+                    <div class="chat-status online">Online</div>
+                </div>
+            </div>
+            <button id="closeChat"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="chat-message bot">
+                <div class="message-content">
+                    Hello! Welcome to ISR International Shipping Routes. How can we help you today?
+                </div>
+                <span class="message-time">Now</span>
+            </div>
+        </div>
+        <div class="quick-chat-options">
+            <button class="quick-chat-btn" data-message="I need a shipping quote">Get Quote</button>
+            <button class="quick-chat-btn" data-message="What are your services?">Services</button>
+        </div>
+        <div class="chat-input-area">
+            <input type="text" id="chatInput" placeholder="Type your message...">
+            <button id="sendChat"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <!-- Chat Toggle -->
+    <button class="chat-toggle" id="chatToggle">
+        <i class="fas fa-comments"></i>
+    </button>
+
+    <!-- Scroll Top -->
+    <div class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

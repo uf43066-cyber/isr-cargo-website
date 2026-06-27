@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book a Pickup - ISR International Shipping Routes. Schedule a pickup for your cargo shipment. Fast and convenient pickup service in UAE.">
+    <meta name="keywords" content="book pickup, schedule pickup, cargo pickup, pickup booking, ISR cargo pickup">
+    <title>Book a Pickup | ISR International Shipping Routes</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Flatpickr for Date/Time Picker -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="canonical" href="https://isrshipping.com/pickup.html">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.png" alt="ISR International Shipping Routes Logo">
+                    <div class="logo-text">
+                        ISR International Shipping Routes
+                        <span>Marine Cargo Services</span>
+                    </div>
+                </a>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="testimonials.html" class="nav-link">Testimonials</a></li>
+                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li><a href="dashboard.html" class="nav-link"><i class="fas fa-user"></i> Dashboard</a></li>
+                    <li>
+                        <div class="language-switch">
+                            <button class="lang-btn active">EN</button>
+                        </div>
+                    </li>
+                </ul>
+                
+                <div class="mobile-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Book a Pickup</h1>
+            <ul class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li>Book Pickup</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Pickup Booking Section -->
+    <section class="pickup-section section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="pickup-card">
+                        <div class="pickup-header">
+                            <h2><i class="fas fa-truck-pickup"></i> Schedule Your Pickup</h2>
+                            <p>Fill in the details below to schedule a pickup for your shipment</p>
+                        </div>
+                        
+                        <form id="pickupForm">
+                            <!-- Pickup Type -->
+                            <div class="form-section">
+                                <h4><i class="fas fa-box"></i> Shipment Details</h4>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="pickupType">Pickup Type</label>
+                                            <select id="pickupType" required>
+                                                <option value="">Select Pickup Type</option>
+                                                <option value="door">Door to Door</option>
+                                                <option value="warehouse">Drop at Warehouse</option>
+                                                <option value="port">Port Delivery</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="packageCount">Number of Packages</label>
+                                            <input type="number" id="packageCount" min="1" max="50" value="1" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="packageDesc">Package Description</label>
+                                    <textarea id="packageDesc" rows="3" placeholder="Describe your packages (e.g., 3 cartons of clothing, 2 boxes of electronics)" required></textarea>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="totalWeight">Total Weight (kg)</label>
+                                            <input type="number" id="totalWeight" min="1" placeholder="Enter total weight" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="estValue">Estimated Value (AED)</label>
+                                            <input type="number" id="estValue" min="1" placeholder="Enter estimated value">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Pickup Address -->
+                            <div class="form-section">
+                                <h4><i class="fas fa-map-marker-alt"></i> Pickup Address</h4>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="pickupName">Contact Name</label>
+                                            <input type="text" id="pickupName" placeholder="Enter your name" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="pickupPhone">Phone Number</label>
+                                            <input type="tel" id="pickupPhone" placeholder="+971 5x xxx xxxx" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pickupEmail">Email Address</label>
+                                    <input type="email" id="pickupEmail" placeholder="your@email.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pickupAddress">Full Address</label>
+                                    <textarea id="pickupAddress" rows="2" placeholder="Street address, building, area" required></textarea>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="pickupCity">City</label>
+                                            <select id="pickupCity" required>
+                                                <option value="">Select City</option>
+                                                <option value="Sharjah">Sharjah</option>
+                                                <option value="Dubai">Dubai</option>
+                                                <option value="Abu Dhabi">Abu Dhabi</option>
+                                                <option value="Ajman">Ajman</option>
+                                                <option value="Ras Al Khaimah">Ras Al Khaimah</option>
+                                                <option value="Fujairah">Fujairah</option>
+                                                <option value="Umm Al Quwain">Umm Al Quwain</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="pickupArea">Area</label>
+                                            <input type="text" id="pickupArea" placeholder="e.g., Al Nahda, Deira">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Schedule -->
+                            <div class="form-section">
+                                <h4><i class="fas fa-calendar-alt"></i> Schedule Pickup</h4>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="pickupDate">Preferred Date</label>
+                                            <input type="text" id="pickupDate" class="date-picker" placeholder="Select date" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="pickupTime">Preferred Time Slot</label>
+                                            <select id="pickupTime" required>
+                                                <option value="">Select Time</option>
+                                                <option value="morning">Morning (9 AM - 12 PM)</option>
+                                                <option value="afternoon">Afternoon (12 PM - 3 PM)</option>
+                                                <option value="evening">Evening (3 PM - 6 PM)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="specialInstructions">Special Instructions (Optional)</label>
+                                    <textarea id="specialInstructions" rows="2" placeholder="Any special instructions for the driver"></textarea>
+                                </div>
+                            </div>
+                            
+                            <!-- Additional Services -->
+                            <div class="form-section">
+                                <h4><i class="fas fa-plus-circle"></i> Additional Services</h4>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" id="packingService" value="packing">
+                                        <span class="checkmark"></span>
+                                        <div class="checkbox-content">
+                                            <strong>Professional Packing</strong>
+                                            <p>Let our team pack your items professionally - AED 50</p>
+                                        </div>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" id="insuranceService" value="insurance">
+                                        <span class="checkmark"></span>
+                                        <div class="checkbox-content">
+                                            <strong>Cargo Insurance</strong>
+                                            <p>Protect your shipment against damage/loss - 2% of declared value</p>
+                                        </div>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" id="fragileService" value="fragile">
+                                        <span class="checkmark"></span>
+                                        <div class="checkbox-content">
+                                            <strong>Fragile Handling</strong>
+                                            <p>Special care for fragile items - AED 25</p>
+                                        </div>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" id="smsService" value="sms">
+                                        <span class="checkmark"></span>
+                                        <div class="checkbox-content">
+                                            <strong>SMS Notifications</strong>
+                                            <p>Receive SMS updates on your shipment - AED 5</p>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <!-- Summary -->
+                            <div class="pickup-summary" id="pickupSummary">
+                                <h4><i class="fas fa-receipt"></i> Booking Summary</h4>
+                                <div class="summary-item">
+                                    <span>Pickup Type:</span>
+                                    <span id="summaryType">-</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span>Packages:</span>
+                                    <span id="summaryPackages">-</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span>Weight:</span>
+                                    <span id="summaryWeight">-</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span>Date:</span>
+                                    <span id="summaryDate">-</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span>Time:</span>
+                                    <span id="summaryTime">-</span>
+                                </div>
+                                <div class="summary-item total">
+                                    <span>Additional Services:</span>
+                                    <span id="summaryServices">AED 0</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Error/Success Messages -->
+                            <div id="pickupError" class="alert alert-danger" style="display: none;"></div>
+                            <div id="pickupSuccess" class="alert alert-success" style="display: none;">
+                                <h4><i class="fas fa-check-circle"></i> Pickup Scheduled Successfully!</h4>
+                                <p>Your pickup has been booked. Confirmation will be sent to your email.</p>
+                                <p><strong>Pickup Reference:</strong> <span id="pickupRef"></span></p>
+                            </div>
+                            
+                            <!-- Loading Spinner -->
+                            <div class="spinner" style="display: none; text-align: center; margin: 20px 0;">
+                                <i class="fas fa-spinner fa-spin fa-2x"></i>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-lg w-100">
+                                <i class="fas fa-calendar-check"></i> Confirm Pickup
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works section-padding bg-light">
+        <div class="container">
+            <h2 class="text-center">How Pickup Works</h2>
+            <div class="steps-grid">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <h4>Book Online</h4>
+                    <p>Fill in your pickup details and preferred time slot</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <h4>Confirmation</h4>
+                    <p>Receive confirmation via email and SMS</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <h4>Pickup</h4>
+                    <p>Our driver arrives at the scheduled time</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="footer-logo">
+                        <img src="images/logo.png" alt="ISR International Shipping Routes Logo">
+                        <span>ISR International Shipping Routes</span>
+                    </a>
+                    <p>Professional marine cargo services in Sharjah, UAE. Shipping to Pakistan and worldwide.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="quote.html">Get Quote</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="services.html">Domestic Shipping</a></li>
+                        <li><a href="services.html">International Shipping</a></li>
+                        <li><a href="services.html">Express Cargo</a></li>
+                        <li><a href="services.html">Warehousing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Sharjah, UAE</li>
+                        <li><i class="fas fa-phone"></i> +971 589 195 672</li>
+                        <li><i class="fas fa-envelope"></i> isrcargo@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ISR International Shipping Routes. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/971589195672" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Live Chat Widget -->
+    <div class="chat-widget" id="chatWidget">
+        <div class="chat-header">
+            <div class="chat-header-info">
+                <div class="chat-avatar">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <div>
+                    <strong>ISR International Shipping Routes Support</strong>
+                    <div class="chat-status online">Online</div>
+                </div>
+            </div>
+            <button id="closeChat"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="chat-message bot">
+                <div class="message-content">
+                    Hello! Need to schedule a pickup? We're here to help!
+                </div>
+                <span class="message-time">Now</span>
+            </div>
+        </div>
+        <div class="quick-chat-options">
+            <button class="quick-chat-btn" data-message="I need a shipping quote">Get Quote</button>
+            <button class="quick-chat-btn" data-message="Contact customer support">Contact</button>
+        </div>
+        <div class="chat-input-area">
+            <input type="text" id="chatInput" placeholder="Type your message...">
+            <button id="sendChat"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <!-- Chat Toggle -->
+    <button class="chat-toggle" id="chatToggle">
+        <i class="fas fa-comments"></i>
+    </button>
+
+    <!-- Scroll Top -->
+    <div class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Flatpickr -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
+    
+    <script>
+        // Initialize Flatpickr
+        $(document).ready(function() {
+            // Set minimum date to today
+            var today = new Date();
+            var tomorrow = new Date(today);
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            
+            $('.date-picker').flatpickr({
+                minDate: tomorrow,
+                maxDate: new Date().fp_incr(30),
+                dateFormat: "Y-m-d",
+                disableMobile: "true"
+            });
+        });
+    </script>
+</body>
+</html>
